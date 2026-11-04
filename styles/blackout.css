@@ -55,11 +55,18 @@ main {
   opacity:.55;
 }
 
-.again {
+/* the pair of buttons, pinned to the bottom right beside the poem block */
+.actions {
   position:fixed;
   bottom:calc(28px + env(safe-area-inset-bottom,0px));
-  right:max(24px, calc((100vw - 760px) / 2 - 150px));
+  right:max(24px, calc((100vw - 760px) / 2 - 280px));
   z-index:2;
+  display:flex;
+  gap:10px;
+  transition:opacity .5s;
+}
+
+.actions button {
   background:var(--paper);
   color:var(--ink);
   border:1px solid var(--ink);
@@ -73,11 +80,36 @@ main {
   transition:opacity .3s, background .3s, color .3s;
 }
 
-.again:hover, .again:focus-visible {
+.actions button:hover,
+.actions button:focus-visible {
   opacity:1;
   background:var(--ink);
   color:var(--paper);
   outline:none;
+}
+
+/* "next" is filled, so it reads as the way onward and "new poem" reads as the side option */
+#next {
+  background:var(--ink);
+  color:var(--paper);
+}
+
+#next:hover,
+#next:focus-visible {
+  background:var(--paper);
+  color:var(--ink);
+}
+
+/* fade the buttons out with the rest of the page when leaving */
+html.out .actions {
+  opacity:0;
+  pointer-events:none;
+}
+
+/* on phones the pair is too wide to share the bottom edge with the "click" hint, so lift the hint */
+@media (max-width:640px) {
+  .hint { bottom:calc(84px + env(safe-area-inset-bottom,0px)); }
+  .actions { right:16px; }
 }
 
 html.out .again {

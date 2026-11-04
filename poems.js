@@ -15,7 +15,7 @@
     'does love constrain your vision?',
     'could i trade some future time and spend it with you',
     'picking you up like dirt on the road',
-    'swimming against the current staying in the same place',
+    'swimming against the current, staying in the same place',
     'no one ideal form or type',
     'i assume, against any ideal',
     'tumbling through the hand',

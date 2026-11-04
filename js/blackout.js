@@ -18,6 +18,7 @@
   const textContainer = document.getElementById('text');
   const hint = document.getElementById('hint');
   const newPoemButton = document.getElementById('again');
+  const nextPageButton = document.getElementById('next');
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;   // true if the visitor wants less animation
 
   // The words on the page, grouped by stretch. wordsByStretch[2][5] is the 6th word of the 3rd stretch. Each entry is { element, isPoemWord }: element    - the <span> on the page, isPoemWord - true if this word is part of the hidden poem (it stays visible when blacked out)
@@ -131,6 +132,11 @@
       hint.textContent = 'click';
       hint.classList.add('on');
     }, reduceMotion ? 0 : 500);
+  });
+
+  // Next page direct
+  nextPageButton.addEventListener('click', event => {
+    window.location = '../pages/seams.html';
   });
 
   // Show the "click" hint after a short pause.
