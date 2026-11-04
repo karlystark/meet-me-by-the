@@ -6,4 +6,4 @@ currently the site has two pages, but that will likely expand with new experimen
 
 you can interact with the site at meetmebythe.com
 
-
+made with support from claude code
