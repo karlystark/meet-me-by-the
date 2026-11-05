@@ -31,7 +31,7 @@
     'where I could meet you in your mind': 4,                  // where I could meet | you in your mind
     'does love constrain your vision?': 3,                     // does love constrain | your vision?
     'swimming against the current, staying in the same place': 4,  // swimming against the current, | staying in the same place
-    'tumbling through the hand': 2,                            // tumbling through | the hand
+    'tumbling through the hand': 1,                            // tumbling | through the hand
   };
 
   const poemContainer = document.getElementById('poem');
